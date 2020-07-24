@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="style/test.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="index.html">Covid-19 Track</a></li>
+    <li><a href="graph.html">Covid-19 Graph</a></li>
+    <li><a href="protect.html">Protect</a></li>
+    <li><a href="test.html" class="active">Virtual Test</a></li>
+    <li><a href="about.html">About us</a></li>
+  </ul>
+  <!-- Navbar -->
+  <div class="header">
+    <p class="intro">"Do you have any symptoms?"</p>
+    <p class="intro2">Here you will find a initial diagnostic test for the Corona virus</p>
+  </div>
+  <script type="text/javascript">
+    function myFunction() {
+      document.getElementById("tips").innerHTML = "This is just a simple test, for more information please call 937";
+    }
+  </script>
+  <section class="main-section intro">
+    <!-- <p id="how">Click the button below.</p> -->
+  </section>
+  <button id="Btn1" onclick="myFunction()" target="_blank" type="button" name="button">Virtual Test?</button>
+  <p id="tips"></p>
+  <div class="cc">
+    <div class="row-full">
+      <form>
+        <table class="centerTable">
+          <tr>
+            <td>
+              <label id="labelForm" for="q1">Do you have Fever?</label><br>
+              <select id="q1">
+                <option value="no">No</option>
+                <option value="notEvery">Not everytime</option>
+                <option value="someTimes">Sometimes</option>
+                <option value="yes">Yes</option>
+              </select>
+              <!--  --> <br>
+            </td>
+            <td>
+              <label id="labelForm" for="q2">Headech?</label><br>
+              <select id="q2">
+                <option value="no">No</option>
+                <option value="notEvery">Not everytime</option>
+                <option value="someTimes">Sometimes</option>
+                <option value="yes">Yes</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label id="labelForm" for="q3">Cough?</label><br>
+              <select id="q3">
+                <option value="no">No</option>
+                <option value="notEvery">Not everytime</option>
+                <option value="someTimes">Sometimes</option>
+                <option value="yes">Yes</option>
+              </select>
+              <!--  --> <br>
+            </td>
+            <td>
+              <label id="labelForm" for="q4">Throat Sore?</label><br>
+              <select id="q4">
+                <option value="no">No</option>
+                <option value="notEvery">Not everytime</option>
+                <option value="someTimes">Sometimes</option>
+                <option value="yes">Yes</option>
+              </select>
+              <!--  --> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label id="labelForm" for="q5">Aches and pains?</label><br>
+              <select id="q5">
+                <option value="no">No</option>
+                <option value="notEvery">Not everytime</option>
+                <option value="someTimes">Sometimes</option>
+                <option value="yes">Yes</option>
+              </select>
+              <!--  --> <br>
+            </td>
+
+            <td>
+              <label id="labelForm" for="q6">General stress?</label><br>
+              <select id="q6">
+                <option value="no">No</option>
+                <option value="notEvery">Not everytime</option>
+                <option value="someTimes">Sometimes</option>
+                <option value="yes">Yes</option>
+              </select>
+              <!--  --> <br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label id="labelForm" for="q7">Sneezing?</label><br>
+              <select id="q7">
+                <option value="no">No</option>
+                <option value="notEvery">Not everytime</option>
+                <option value="someTimes">Sometimes</option>
+                <option value="yes">Yes</option>
+              </select>
+              <!--  --> <br>
+            </td>
+            <td>
+              <label id="labelForm" for="q8">Difficulty breathing?</label><br>
+              <select id="q8">
+                <option value="no">No</option>
+                <option value="notEvery">Not everytime</option>
+                <option value="someTimes">Sometimes</option>
+                <option value="yes">Yes</option>
+              </select>
+              <!--  --> <br>
+            </td>
+          </tr>
+        </table>
+
+      </form>
+      <button id="btn" onclick="myF()" type="button" name="button">Submit</button>
+      <!--  -->
+      <section id="result">
+
+        <i id="icon" class="fas fa-check-circle" style="font-size: 40px;  display:none;"></i>
+        <h3 id="testResult"></h3>
+      </section>
+      <!--  -->
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2020 Copyright: COVID-FCIT</p>
+  </footer>
+  <script type="text/javascript">
+    var res = document.getElementById("testResult");
+    var icon = document.getElementById("icon");
+
+    function myF() {
+      var q1 = document.getElementById("q1").value;
+      var q2 = document.getElementById("q2").value;
+      var q3 = document.getElementById("q3").value;
+      var q4 = document.getElementById("q4").value;
+      var q5 = document.getElementById("q5").value;
+      var q6 = document.getElementById("q6").value;
+      var q7 = document.getElementById("q7").value;
+      var q8 = document.getElementById("q8").value;
+
+      if (q1 == 'someTimes' && q2 && 'someTimes' && q3 == 'someTimes' && q4 == 'someTimes' &&
+        q5 == 'notEvery' && q6 == 'yes' && q7 == 'yes' && q8 == 'no') {
+          document.getElementById("icon").className = "fas fa-check-circle";
+          icon.style.display = 'block';
+          icon.style.color = 'green';
+          res.innerHTML = 'You are suffering from seasonal flu, do not panic!';
+          res.style.color = 'green';
+      }else if (q1 == 'yes' & q2 == 'yes' & q3 == 'yes' & q4 == 'yes' & q5 == 'yes' &
+        q6 == 'yes' & q7 == 'yes' & q8 == 'yes') {
+        document.getElementById("icon").className = "fas fa-times-circle";
+        icon.style.color = 'red';
+        res.innerHTML = 'There is a high possibility that you infected with the Coronavirus, you should contact the relevant authorities immediately';
+        res.style.color = 'red';
+      } else if(q1 == 'no' & q2 == 'no' & q3 == 'no' & q4 == 'no' & q5 == 'no' &
+        q6 == 'no' & q7 == 'no' & q8 == 'no'){
+          document.getElementById("icon").className = "fas fa-check-circle";
+            icon.style.display = 'block';
+            icon.style.color = 'green';
+            res.style.color = 'green';
+            res.innerHTML = 'You are completely healthy, enjoy your health!';
+
+      } else if(q1 == 'yes'){
+        document.getElementById("icon").className = "fas fa-times-circle";
+        icon.style.display = 'block';
+        icon.style.color = 'red';
+        res.innerHTML = 'There is a high possibility that you infected with the Coronavirus, you should contact the relevant authorities immediately';
+        res.style.color = 'red';
+      }else if(q1 == 'someTimes'){
+        document.getElementById("icon").className = "fas fa-check-circle";
+        icon.style.display = 'block';
+        icon.style.color = 'green';
+        res.innerHTML = 'You are suffering from seasonal flu, do not panic!';
+        res.style.color = 'green';
+      }
+      else{
+        document.getElementById("icon").className = "fas fa-check-circle";
+        icon.style.display = 'block';
+        icon.style.color = 'green';
+        res.innerHTML = 'You are completely healthy, and stay safe!';
+        res.style.color = 'green';
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>

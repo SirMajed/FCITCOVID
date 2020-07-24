@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Covid Datas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <script src="script.js"> </script>
+  <style media="screen">
+    #virus {
+      font-size: 80px;
+      padding: 6px;
+      color: #32bf8b;
+    }
+
+    #cov {
+      width: 100%;
+      height: 40%;
+    }
+
+    .intro2 {
+      font-size: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Nav -->
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="index.html" class="active">Covid-19 Track</a></li>
+      <li><a href="graph.html">Covid-19 Graph</a></li>
+      <li><a href="protect.html">Protect</a></li>
+      <li><a href="test.html">Virtual Test</a></li>
+      <li><a href="about.html">About us</a></li>
+    </ul>
+    </ul>
+  </nav>
+  <div class="header">
+    <p class="intro">"Track COVID-19 Status all over the Islamic Countries"</p>
+    <p class="intro2">Simply, choose a country from the drop-down list below.</p>
+  </div>
+
+  <div class="options">
+    <h1 style="color:white;">Choose country</h1>
+    <select id="countries" onchange="myFunction()">
+      <option disabled selected value> -- Select Country -- </option>
+      <option value="https://corona.lmao.ninja/v2/countries/SA">Saudi Arabia</option>
+      <option value="https://corona.lmao.ninja/v2/countries/eg">Egypt</option>
+      <option value="https://corona.lmao.ninja/v2/countries/TN">Tunisia</option>
+      <option value="https://corona.lmao.ninja/v2/countries/ye">Yemen</option>
+      <option value="https://corona.lmao.ninja/v2/countries/KW">Kuwait</option>
+      <option value="https://corona.lmao.ninja/v2/countries/BH">Bahrain</option>
+      <option value="https://corona.lmao.ninja/v2/countries/AE">UAE</option>
+      <option value="https://corona.lmao.ninja/v2/countries/QA">Qatar</option>
+      <option value="https://corona.lmao.ninja/v2/countries/DZ">Algeria</option>
+      <option value="https://corona.lmao.ninja/v2/countries/IQ">Iraq</option>
+      <option value="https://corona.lmao.ninja/v2/countries/JO">Jordan</option>
+      <option value="https://corona.lmao.ninja/v2/countries/LB">Lebanon</option>
+      <option value="https://corona.lmao.ninja/v2/countries/LY">Libya</option>
+      <option value="https://corona.lmao.ninja/v2/countries/MA">Morooco</option>
+      <option value="https://corona.lmao.ninja/v2/countries/PS">Palestine</option>
+      <option value="https://corona.lmao.ninja/v2/countries/OM">Oman</option>
+      <option value="https://corona.lmao.ninja/v2/countries/SD">Sudan</option>
+      <option value="https://corona.lmao.ninja/v2/countries/SO">Somalia</option>
+
+    </select>
+  </div>
+
+
+  <div class="first">
+    <h2>COVID -19 Cases in <span id="country">
+  </div>
+  </span> <img src="" id="flag" alt="Select from countries from the List please." style="display: none" onload="this.style.display=''"></h2>
+
+  <div class="wrapper">
+    <!-- Start Box -->
+    <div class="box b1">
+      <i class="fas fa-tachometer-alt"></i>
+      <h1>Today Cases</h1>
+      <hr class="hh">
+      <span id="todayCases"></span>
+    </div>
+
+    <div class="box b2">
+      <i class="fa fa-th-list"></i>
+      <h1>All Cases</h1>
+      <hr class="hh">
+      <span id="cases"></span>
+    </div>
+
+    <div class="box b3">
+      <i class="fas fa-tachometer-alt"></i>
+      <h1>Active Cases</h1>
+      <hr class="hh">
+      <span id="active"></span>
+    </div>
+
+    <div class="box b4">
+      <i class="fa fa-times-circle"></i>
+      <h1>Critical Cases</h1>
+      <hr class="hh">
+      <span id="critical"></span>
+    </div>
+
+    <div class="box b5">
+      <i class="fa fa-times"></i>
+      <h1>Total Deaths</h1>
+      <hr class="hh">
+      <span id="death"></span>
+    </div>
+
+    <div class="box b6">
+      <i class="fas fa-check-square"></i>
+      <h1>Total Recovered</h1>
+      <hr class="hh">
+      <span id="recovered"></span>
+    </div>
+
+    <div class="box b7">
+      <i class="fa fa-eye"></i>
+      <h1>Total Tests Done</h1>
+      <hr class="hh">
+      <span id="tests"></span>
+    </div>
+
+    <div class="box b8">
+      <i class="far fa-check-square"></i>
+      <h1>Today Recovered</h1>
+      <hr class="hh">
+      <span id="today"></span>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2020 Copyright: COVID-FCIT</p>
+  </footer>
+</body>
+
+</html>
+<script type="text/javascript">
+  $("#countries").append($("#countries option").remove().sort(function(a, b) {
+    var at = $(a).text(),
+      bt = $(b).text();
+    return (at > bt) ? 1 : ((at < bt) ? -1 : 0);
+  }));
+
+  function myFunction() {
+    var x = document.getElementById("countries").value;
+
+    fetch(x).then((response) => { //When the request completes,the promise will resolve into a Response object.
+      return response.json(); // now the response will hold the JSON data. and store it on "data"
+    }).then((data) => {
+      console.log(data);
+      document.getElementById("country").innerHTML = data.country;
+      document.getElementById("flag").src = data.countryInfo.flag;
+      document.getElementById("todayCases").innerHTML = data.todayCases.toLocaleString();
+      document.getElementById("cases").innerHTML = data.cases.toLocaleString();
+      document.getElementById("active").innerHTML = data.active.toLocaleString();
+      document.getElementById("critical").innerHTML = data.critical.toLocaleString();
+      document.getElementById("death").innerHTML = data.deaths.toLocaleString();
+      document.getElementById("recovered").innerHTML = data.recovered.toLocaleString();
+      document.getElementById("tests").innerHTML = data.tests.toLocaleString();
+      document.getElementById("today").innerHTML = data.todayRecovered.toLocaleString();
+
+    });
+  }
+</script>

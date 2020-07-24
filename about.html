@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Covid Datas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style/about.css" />
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <style media="screen">
+    footer {
+      padding: 10px 20px;
+      background: #212121;
+      color: white;
+      font-family: monospace;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Nav -->
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="index.html">Covid-19 Track</a></li>
+      <li><a href="graph.html">Covid-19 Graph</a></li>
+      <li><a href="protect.html">Protect</a></li>
+      <li><a href="test.html">Virtual Test</a></li>
+      <li><a href="about.html" class="active">About us</a></li>
+    </ul>
+    </ul>
+  </nav>
+  <!-- Nav -->
+  <div class="header">
+    <p class="intro">"About Us"</p>
+    <p class="intro2">We are FCIT Students who decided to build this website to track the corona virus among all Islamic countries</p>
+  </div>
+
+  <div class="wrapper">
+    <div class="container">
+      <div class="cen">
+        <img src="img/img1.jpg" alt="Avatar" style="width:30%">
+        <h1 id="Name1"></h1>
+        <h2 id="ID1"></h2>
+        <h3 id="Track1"></h3>
+      </div>
+      <div class="vertical"></div>
+      <div class="info">
+        <p id="info">I'm Majed Ahmed, I love UI design, Web development, Graphic Designer and Gamer. I really love to design web pages with my own special designs and colors, trying to get a new Ideas also. Im student at <strong>FCIT-17.</strong> Information Technology specialist..</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cen">
+        <img src="img/img3.jpg" alt="Avatar" style="width:30%">
+        <h1 id="Name2"></h1>
+        <h2 id="ID2"></h2>
+        <h3 id="Track2"></h3>
+      </div>
+      <div class="vertical"></div>
+      <div class="info">
+        <p id="info">Information technology student who loves building apps to make people’s life better and easier. I'm always willing to learn new technologies to expand my knowledge and experience. I’d love to combine my passion for making our life easier with my software development skills to continue building high quality products.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cen">
+        <img src="img/img2.jpg" alt="Avatar" style="width:30%">
+        <h1 id="Name3"></h1>
+        <h2 id="ID3"></h2>
+        <h3 id="Track3"></h3>
+      </div>
+      <div class="vertical"></div>
+      <div class="info">
+        <p id="info">I am Omar AlAmoudi , IT Student in King Abdulaziz University. I'm interested in Web development, Grapics design and Video editing. I spend my free time in designing using photoshop, Gaming and make a montages with my gaming clips !.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cen">
+        <img src="img/img4.jpg" alt="Avatar" style="width:30%">
+        <h1 id="Name4"></h1>
+        <h2 id="ID4"></h2>
+        <h3 id="Track4"></h3>
+      </div>
+      <div class="vertical"></div>
+      <div class="info">
+        <p id="info">An ambitious person who works hard on every task I undertake as I enjoy getting new skills on the go, especially when working with motivating people. I am highly into information technology and programming in general, as well as handling electronics and hardware.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    fetch("https://api.npoint.io/e9973a67756b439dc24d").then((response) => { //When the request completes,the promise will resolve into a Response object.
+      return response.json(); // now the response will hold the JSON data. and store it on "data"
+    }).then((data) => {
+      console.log(data);
+      document.getElementById("Name1").innerHTML = data.Name1.toLocaleString();
+      document.getElementById("ID1").innerHTML = data.ID1.toLocaleString();
+      document.getElementById("Track1").innerHTML = data.Track1.toLocaleString();
+
+      document.getElementById("Name2").innerHTML = data.Name2.toLocaleString();
+      document.getElementById("ID2").innerHTML = data.ID2.toLocaleString();
+      document.getElementById("Track2").innerHTML = data.Track2.toLocaleString();
+
+      document.getElementById("Name3").innerHTML = data.Name3.toLocaleString();
+      document.getElementById("ID3").innerHTML = data.ID3.toLocaleString();
+      document.getElementById("Track3").innerHTML = data.Track3.toLocaleString();
+
+      document.getElementById("Name4").innerHTML = data.Name4.toLocaleString();
+      document.getElementById("ID4").innerHTML = data.ID4.toLocaleString();
+      document.getElementById("Track4").innerHTML = data.Track4.toLocaleString();
+    });
+  </script>
+  <footer>
+    <p>© 2020 Copyright: COVID-FCIT</p>
+  </footer>
+</body>
+
+</html>

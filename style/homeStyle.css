@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+  margin: auto;
+  padding: auto;
+}
+
+ul {
+  list-style-type: none;
+  /* margin-bottom: 10px; */
+  margin: 5;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+
+}
+
+li {
+  float: left;
+  font-size: 20px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #03b6fc;
+}
+footer {
+  padding: 10px 20px;
+  background: #212121;
+  color: white;
+  font-family: monospace;
+}
+.headerr {
+  padding: 70px;
+  text-align: center;
+	background-image: linear-gradient(90deg, rgba(0,0,0,0.5) 15%, rgba(0,0,0,0.5) 100%), url("../img/hd.jpg");
+  color: white;
+  font-size: 30px;
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 35px -15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 35px -15px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 35px -15px rgba(0, 0, 0, 0.75);
+}
+body {
+  /* background: #242424; */
+  background-image: linear-gradient(90deg, rgba(0,0,0,0.5) 15%, rgba(0,0,0,0.5) 100%),URL("../img/wallpaper.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+#desc{
+  font-size: 15px;
+}
+.wrapper {
+  display: grid;
+  grid-gap: 70px;
+  grid-template-columns: auto auto;
+  grid-auto-columns: 200px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  background: white;
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 10px;
+  height: 300px;
+  -webkit-box-shadow: 0px 0px 35px -15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 35px -15px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 35px -15px rgba(0, 0, 0, 0.75);
+}
+.container:hover{
+    transform: translateY(-10px);
+}
+.container:hover ::before{
+    transform: scale(1.5);
+}
+.container i {
+  font-size: 80px;
+  color: #03b6fc;
+}
+
+.container h1 {
+  color: #242424;
+  font-size: 40px;
+}
+
+.btn {
+  text-decoration: none;
+}
+
+#Btn1 {
+  margin-top: 20px;
+  text-align: center;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 150px;
+  color: #fff;
+  font-size: 16px;
+  background: #454545;
+  box-shadow: 0 3px 20px 0 #0000003b;
+}
+
+#Btn1:hover {
+  cursor: pointer;
+  background-color: #03b6fc;
+  color: #fff;
+  transition-duration: 0.4s;
+}
+.main-section.cards>.intro{
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  font-size: 45px;
+}
+.main-section.cards>.desc{
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  font-size: 19px;
+}
